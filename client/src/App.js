@@ -96,14 +96,14 @@ const handleClick = () => {
         top={0}
         width={OBSTACLE_WIDTH}
         height={obstacleHeight}
-        left={obstacleLeft}
-        />
+        left={obstacleLeft}/>
+
         <ObstacleTwo 
         top={GAME_HEIGHT - (obstacleHeight + bottomObstacleHeight)}
         width={OBSTACLE_WIDTH}
         height={bottomObstacleHeight}
-        left={obstacleLeft}
-        />
+        left={obstacleLeft}/>
+
         <Bird size={BIRD_SIZE} top={birdPosition}/>
        <Ground />
       </GameBox>
@@ -112,6 +112,9 @@ const handleClick = () => {
       </ScoreDiv>
       <BorderRight/>
       <BorderBottom/>
+      <TitleBottom>
+        Flappy Birb
+      </TitleBottom>
     </Div>
   )
 };
@@ -128,14 +131,12 @@ z-index: 20;
 const BorderLeft = styled.div`
 width: 50px;
 height: 565px;
-/* position: absolut; */
 background-color: #f0f0f0;
 z-index: 100;
 `
 const BorderRight = styled.div`
 width: 50px;
 height: 565px;
-/* position: absolut; */
 background-color: #f0f0f0;
 z-index: 100;
 `
@@ -148,6 +149,17 @@ position: absolute;
 margin-top: 515px;
 `
 
+const TitleBottom = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+font-size: 25px;
+font-family: 'Press Start 2P';
+color: black;
+margin-top: 527px;
+z-index: 101;
+`
 
 const Div = styled.div`
 display: flex;
@@ -155,7 +167,8 @@ width: 100%;
 justify-content: center;
 & span {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
+  font-family: 'Press Start 2P';
   align-items: center;
   position: absolute;
   z-index: 50;
@@ -171,7 +184,7 @@ width: 50px;
 height: 50px;
 background-color: black;
 z-index: 50;
-box-shadow: 0 1px 4px #ccc;
+box-shadow: 0 1px 4px #000;
 `
 
 const GameBox = styled.div`
