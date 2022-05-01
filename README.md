@@ -1,8 +1,8 @@
 # Flappy Bird!
 A fully-functioning one-day coding challenge to build the Flappy Bird game! Some of the features I liked-
 - collision detection built-in, so when the bird hits a pipe, game over
-- loved building it in Javascript and had fun using styled components, React, and the oroginal graphics to give it a great feel
 - each time the bird passes through the pipes, update the score in the scoreboard
+- built in Javascript and had fun using styled components, React, and the original graphics to give it a great feel
 
 # Images and Gifs
 
