@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import styled from 'styled-components';
 import img from './flappybird-pipe.png';
+import img2 from './flappybird-pipe-bigger.png';
 import bird from './flappy-bird.png';
 import background from './fb-game-background.png';
 import ground from './bottom-background.png';
@@ -39,7 +40,7 @@ useEffect(() => {
   let obstacleId;
   if (gameHasStarted && obstacleLeft >= - OBSTACLE_WIDTH) {
   obstacleId = setInterval(() => {
-  setObstacleLeft((obstacleLeft) => obstacleLeft - 7);
+  setObstacleLeft((obstacleLeft) => obstacleLeft - 8);
   }, 24);
   return () => {
   clearInterval(obstacleId);
@@ -113,7 +114,7 @@ const handleClick = () => {
       <BorderRight/>
       <BorderBottom/>
       <TitleBottom>
-        Flappy Birb
+        FLAPPY BIRB
       </TitleBottom>
     </Div>
   )
@@ -209,7 +210,7 @@ z-index: 16;
 const Obstacle = styled.div`
 position: relative;
 top: ${(props) => props.top}px;
-background-image: url(${img});
+background-image: url(${img2});
 background-repeat: no-repeat;
 transform: rotate(180deg);
 width: ${(props) => props.width}px;
@@ -222,7 +223,7 @@ z-index: 15;
 const ObstacleTwo = styled.div`
 position: relative;
 top: ${(props) => props.top}px;
-background-image: url(${img});
+background-image: url(${img2});
 background-repeat: no-repeat;
 width: ${(props) => props.width}px;
 height: ${(props) => props.height}px;
