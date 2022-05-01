@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import styled from 'styled-components';
-import img from './flappybird-pipe.png';
 import img2 from './flappybird-pipe-bigger.png';
 import bird from './flappy-bird.png';
 import background from './fb-game-background.png';
@@ -11,8 +10,8 @@ const BIRD_SIZE = 60;
 const GAME_WIDTH = 500;
 const GAME_HEIGHT = 500;
 const GRAVITY = 6;
-const JUMP_HEIGHT = 50;
-const OBSTACLE_WIDTH = 55;
+const JUMP_HEIGHT = 60;
+const OBSTACLE_WIDTH = 60;
 const OBSTACLE_GAP = 125;
 
 const App = () => {
@@ -128,6 +127,15 @@ height: ${(props) => props.size}px;
 width: ${(props) => props.size}px;
 top: ${(props) => props.top}px;
 z-index: 20;
+animation: MoveUpDown 1s linear infinite;
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
 `
 const BorderLeft = styled.div`
 width: 50px;
